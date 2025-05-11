@@ -1,6 +1,4 @@
 "use client";
-// import Link from 'next/link';
-// import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 
 interface Task {
@@ -12,7 +10,6 @@ interface Task {
 }
 
 export default function Dashboard() {
-  //   const router = useRouter();
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTaskTitle, setNewTaskTitle] = useState("");
   const [newTaskPriority, setNewTaskPriority] = useState<
@@ -22,9 +19,7 @@ export default function Dashboard() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading data
     setTimeout(() => {
-      // Mock data
       setTasks([
         {
           id: "1",
@@ -111,7 +106,6 @@ export default function Dashboard() {
     }
   };
 
-  // Format date for display
   const formatDate = (dateString?: string) => {
     if (!dateString) return "";
     const date = new Date(dateString);

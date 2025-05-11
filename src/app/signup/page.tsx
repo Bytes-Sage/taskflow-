@@ -17,12 +17,8 @@ export default function Signup() {
     setError("");
     setIsLoading(true);
 
-    // Simulate signup request
     try {
-      // In a real app, this would be an API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      // For demo purposes - redirect to dashboard
       router.push("/dashboard");
     } catch (err) {
       setError("An error occurred. Please try again }." + err);
